@@ -1,0 +1,19 @@
+#ifndef __ALCHEMIST_CONFIG_H_
+#define __ALCHEMIST_CONFIG_H_
+
+// clang-format off
+#define ALCHEMIST_VERSION "@PROJECT_VERSION@"
+// clang-format on
+
+#if defined(_WIN32) || defined(_WIN64) || defined(_WINDOWS)
+
+#define ALCHEMIST_PLATFORM_WIN32 1
+
+#if defined(_DLL)
+#define TTAPI __declspec(dllexport)
+#else
+#define TTAPI __declspec(dllimport)
+#endif
+#endif
+
+#endif // __ALCHEMIST_CONFIG_H_
